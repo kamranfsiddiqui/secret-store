@@ -34,26 +34,12 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
                          PATCH  /users/:id(.:format)                       users#update
                          PUT    /users/:id(.:format)                       users#update
                          DELETE /users/:id(.:format)                       users#destroy
+                         
+== Possible Refinements
+   +better front end
+   +edit/update/destroy users
+   +let users share all or individual secrets
+   +test using cucumber/rspec
 
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
