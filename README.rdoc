@@ -1,6 +1,6 @@
 = Secret Store
 
-** URIs
+# URIs
 Things you may want to cover:
 
 * Ruby version
