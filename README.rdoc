@@ -38,10 +38,10 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
                          DELETE /users/:id(.:format)                       users#destroy
                          
 == Possible Refinements
-   ===better front end
-   ===edit/update/destroy users
-   ===let users share all or individual secrets
-   ===test using cucumber/rspec
+   +better front end
+   +edit/update/destroy users
+   +let users share all or individual secrets
+   +test using cucumber/rspec
 
 
 
