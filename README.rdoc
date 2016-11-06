@@ -1,7 +1,7 @@
-Secret Store
+=Secret Store
 ==========================================
 
-= URIs
+== URIs
 The following URIs are what I used in the web application:
      Prefix Verb   URI Pattern                                Controller#Action
         new_user_session GET    /users/sign_in(.:format)                   devise/sessions#new
@@ -58,7 +58,7 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
                          
                       
                          
-= Possible Refinements
+== Possible Refinements
    +better front end
    +edit/update/destroy users
    +let users share all or individual secrets
