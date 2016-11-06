@@ -56,7 +56,7 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
                          PUT    /users/:id(.:format)                       users#update
                          DELETE /users/:id(.:format)                       users#destroy
                          
-                      
+== Testing                      
                          
 == Possible Refinements
    +better front end
