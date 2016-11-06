@@ -1,7 +1,26 @@
-= Secret Store
+Secret Store
+==========================================
 
-== URIs
-These are the currently supported URIs in the app.
+= URIs
+The following URIs are what I used in the web application:
+     Prefix Verb   URI Pattern                                Controller#Action
+        new_user_session GET    /users/sign_in(.:format)                   devise/sessions#new
+            user_session POST   /users/sign_in(.:format)                   devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)                  devise/sessions#destroy
+       user_registration POST   /users(.:format)                           devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)                   devise/registrations#new
+                    root GET    /                                          pages#home
+         new_user_secret GET    /users/:user_id/secrets/new(.:format)      secrets#new
+        edit_user_secret GET    /users/:user_id/secrets/:id/edit(.:format) secrets#edit
+             user_secret GET    /users/:user_id/secrets/:id(.:format)      secrets#show
+                         PATCH  /users/:user_id/secrets/:id(.:format)      secrets#update
+                         PUT    /users/:user_id/secrets/:id(.:format)      secrets#update
+                         DELETE /users/:user_id/secrets/:id(.:format)      secrets#destroy
+                         POST   /users(.:format)                           users#create
+                new_user GET    /users/new(.:format)                       users#new
+                    user GET    /users/:id(.:format)                       users#show
+
+But these are all the currently supported URIs in the app of which only the ones listed above were used. The list was generated using the `rake routes` command in Ruby on Rails.
 
                  Prefix Verb   URI Pattern                                Controller#Action
         new_user_session GET    /users/sign_in(.:format)                   devise/sessions#new
@@ -37,11 +56,14 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
                          PUT    /users/:id(.:format)                       users#update
                          DELETE /users/:id(.:format)                       users#destroy
                          
-== Possible Refinements
+                      
+                         
+= Possible Refinements
    +better front end
    +edit/update/destroy users
    +let users share all or individual secrets
    +test using cucumber/rspec
+   +change database for deployment
 
 
 
