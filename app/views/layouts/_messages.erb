@@ -1,3 +1,7 @@
 <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "flash #{key}" %>
+  <% if flash.key?(:warning) or flash.key?(:error)%>
+    <h2> <font color="red"> <%= content_tag :div, value, class: "flash #{key}" %></font></h2>
+  <%else%> 
+    <h2> <font color="blue"> <%= content_tag :div, value, class: "flash #{key}" %></font></h2>
+  <% end %>
 <% end %>

@@ -12,7 +12,6 @@ class SecretsController < ApplicationController
   def new
     @user = User.find(params[:user_id])
     @allowed = @user.id == current_user.id
-    @new_or_edit = :new
     if !user_signed_in?
       flash[:warning] = "You need to sign-in first"
       redirect_to new_user_session_path
@@ -36,7 +35,6 @@ class SecretsController < ApplicationController
   def edit
     @user = User.find(params[:user_id])
     @allowed = @user.id =  current_user.id
-    @new_or_edit = :edit
     if !user_signed_in?
       flash[:warning] = "You need to sign-in first"
       redirect_to new_user_session_path
@@ -88,7 +86,7 @@ class SecretsController < ApplicationController
         flash[:success] = "The secret was successfully destroyed"
         redirect_to user_path(current_user)
       else
-        flash[:success] = "Could not destory the secret"
+        flash[:error] = "Could not destory the secret"
         redirect_to user_secret_path(current_user, @secret)
       end
     end

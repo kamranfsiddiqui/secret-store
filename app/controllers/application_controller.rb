@@ -21,4 +21,11 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(user)
     root_path
   end
+
+  def render_401
+    render file: "#{Rails.root}/public/401.html"
+  end
+  def render_404
+    render file: "#{Rails.root}/public/404.html"
+  end
 end

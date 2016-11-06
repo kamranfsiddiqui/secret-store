@@ -14,9 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#
+#user authentication
 gem 'devise', '3.4.1'
 
+#testing frameworks
 group :test do
   gem 'rspec-rails'
   gem 'simplecov', :require => false
@@ -25,6 +26,10 @@ group :test do
   gem 'database_cleaner' # required by Cucumber
   gem 'autotest-rails'
 end
+
+#bootstrapping
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

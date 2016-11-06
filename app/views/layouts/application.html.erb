@@ -7,18 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <h1 id="home"> <em><%=link_to "Secret Store", root_path%> </em></h1>
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
+    <%= link_to('<button>Logout</button>'.html_safe, destroy_user_session_path, :method => :delete) %>        
+    <%= link_to('<button>My Secrets</button>'.html_safe , user_path(current_user)) %>
 <% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>  
-  <%= link_to('Sign-Up', new_user_registration_path)  %>  
-  </li>
+  <%= link_to('<button>Login</button>'.html_safe, new_user_session_path)  %>  
+  <%= link_to('<button>Sign-Up</button>'.html_safe, new_user_registration_path)  %>  
 <% end %>
 <%= render 'layouts/messages'%>
+<% flash[:success] = flash[:warning] =flash[:error] = nil%>
 <%= yield %>
 
 </body>
