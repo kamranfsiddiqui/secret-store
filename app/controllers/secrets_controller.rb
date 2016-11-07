@@ -29,6 +29,9 @@ class SecretsController < ApplicationController
     if @secret.save
       flash[:success] = "New secret added successfully"
       redirect_to user_secret_path(@user, @secret)
+    else
+      flash[:error] = "There was an error in adding the secret. Please try again."
+      redirect_to user_path(@user)
     end
   end
 
