@@ -1,5 +1,6 @@
 =Secret Store
 ==========================================
+This a simple web app to store secrets online. It was made using the Ruby on Rails framework.
 
 == URIs
 The following URIs are what I used in the web application:
@@ -56,13 +57,12 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
                          PUT    /users/:id(.:format)                       users#update
                          DELETE /users/:id(.:format)                       users#destroy
                          
-== Testing                      
+== Testing  
+Testing was done manually as well as using the Cucumber testing framework. If I had more time I would also have tested in a more fine grained manner using Rspec as well and possibly added continuous integration using TravisCI or something similar. The cucumber tests are in the features/ subdirectory. Assuming Ruby on Rails is installed, you can run the app by running the `rails s` command in your terminal and then in a browser going to the following url: `localhost:3000`. 
                          
 == Possible Refinements
-   +better front end
-   +edit/update/destroy users
+If I was given more time to work on the web app I would work more on the frontend to make less plain and more attractive to users. I would also add the ability for users to edit or destroy their accounts. This would allow users to change/recover passwords, change usernames, etc. and also get rid of all secrets stored in the database if they no longer wish to store them. Another feature I could add if given more time is a feature to share either all secrets or individual secrets with another user as sometimes we wish to share secrets with friends. 
    +let users share all or individual secrets
-   +test using cucumber/rspec
    +change database for deployment
 
 
