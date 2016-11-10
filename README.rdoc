@@ -61,9 +61,8 @@ cancel_user_registration GET    /users/cancel(.:format)                    devis
 Testing was done manually as well as using the Cucumber testing framework. If I had more time I would also have tested in a more fine grained manner using Rspec as well and possibly added continuous integration using TravisCI or something similar. The cucumber tests are in the features/ subdirectory. Assuming Ruby on Rails is installed, you can run the app by running the `rails s` command in your terminal and then in a browser going to the following url: `localhost:3000`. 
                          
 == Possible Refinements
-If I was given more time to work on the web app I would work more on the frontend to make less plain and more attractive to users. I would also add the ability for users to edit or destroy their accounts. This would allow users to change/recover passwords, change usernames, etc. and also get rid of all secrets stored in the database if they no longer wish to store them. Another feature I could add if given more time is a feature to share either all secrets or individual secrets with another user as sometimes we wish to share secrets with friends. 
-   +let users share all or individual secrets
-   +change database for deployment
+If I was given more time to work on the web app I would work more on the frontend to make less plain and more attractive to users. I would also add the ability for users to edit or destroy their accounts. This would allow users to change/recover passwords, change usernames, etc. and also get rid of all secrets stored in the database if they no longer wish to store them. Another feature I could add if given more time is a feature to share or unshare all secrets or individual secrets with another user as sometimes we wish to share secrets with friends. Also, related to the secret sharing feature I could possibly add a user search feature. Right now the app uses SQLite as the backing storage which is okay for testing purposes but would not scale well if I were to deploy the web app to Heroku, AWS, Azure, etc. So I would most likely change the database to something more scalable like MySQL, Postgres, MongoDB, etc.
+
 
 
 
