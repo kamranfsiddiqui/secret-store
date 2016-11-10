@@ -4,7 +4,7 @@ This a simple web app to store secrets online. It was made using the Ruby on Rai
 
 == URIs
 The following URIs are what I used in the web application:
-     Prefix Verb   URI Pattern                                Controller#Action
+                 Prefix  Verb   URI Pattern                                Controller#Action
         new_user_session GET    /users/sign_in(.:format)                   devise/sessions#new
             user_session POST   /users/sign_in(.:format)                   devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)                  devise/sessions#destroy
@@ -23,7 +23,7 @@ The following URIs are what I used in the web application:
 
 But these are all the currently supported URIs in the app of which only the ones listed above were used. The list was generated using the <tt>rake routes</tt> command in Ruby on Rails.
 
-                 Prefix Verb   URI Pattern                                Controller#Action
+                 Prefix  Verb   URI Pattern                                Controller#Action
         new_user_session GET    /users/sign_in(.:format)                   devise/sessions#new
             user_session POST   /users/sign_in(.:format)                   devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)                  devise/sessions#destroy
